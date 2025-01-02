@@ -1,0 +1,206 @@
+.roles-container {
+  width: 100vw;
+  height: 100vh;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.roles-content {
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.roles-wrapper {
+  width: 100%;
+  padding: 2rem;
+}
+
+.roles-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2.5rem;
+}
+
+.roles-title {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #000;
+  text-align: left;
+  margin: 0;
+  margin-bottom: 2.5rem;
+}
+
+.roles-section {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+
+.roles-list {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.roles-items {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.role-item {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+  display: inline-block;
+  color: #000;
+}
+
+/* Hide duplicate text content */
+.role-item .sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Prevent letter duplication */
+.role-item span.letter {
+  display: inline-block;
+  position: relative;
+  white-space: pre;
+}
+
+.role-item span.letter + span.letter {
+  margin-left: 0;
+}
+
+/* Apply button styles */
+.apply-button {
+  align-self: center;
+  white-space: nowrap;
+}
+
+.btn {
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 2rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: none;
+}
+
+.btn-solid {
+  background-color: #000;
+  color: #fff;
+}
+
+.btn-solid:hover {
+  opacity: 0.8;
+}
+
+/* Back button */
+.back-button {
+  position: fixed;
+  top: 2rem;
+  left: 2rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  color: #000;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.back-button:hover {
+  opacity: 0.7;
+}
+
+@media (max-width: 1024px) {
+  .roles-list {
+    max-width: 450px;
+  }
+  
+  .roles-title {
+    font-size: 1.5rem;
+  }
+  
+  .role-item {
+    font-size: 1.25rem;
+  }
+  
+  .roles-section {
+    gap: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .roles-list {
+    max-width: 400px;
+  }
+  
+  .roles-title {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+  }
+  
+  .role-item {
+    font-size: 1.125rem;
+  }
+  
+  .roles-section {
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .roles-container {
+    padding: 1rem;
+  }
+  
+  .roles-wrapper {
+    padding: 1rem;
+  }
+  
+  .roles-list {
+    max-width: 100%;
+  }
+  
+  .roles-title {
+    font-size: 1.125rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .role-item {
+    font-size: 1rem;
+  }
+  
+  .roles-section {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .apply-button {
+    width: 100%;
+  }
+}

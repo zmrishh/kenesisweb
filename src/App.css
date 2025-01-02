@@ -1,0 +1,427 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@400;500&display=swap');
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-color: #FAFAFA;
+}
+
+.main-container {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background-color: #fff; /* Same as roles page */
+}
+
+/* Header */
+header {
+  position: fixed;
+  top: 2rem;
+  left: 2rem;
+  z-index: 10;
+}
+
+.brand {
+  font-family: 'EB Garamond', serif;
+  font-size: 1.25rem;
+  font-style: italic;
+  font-weight: 400;
+  color: #000;
+  margin: 0;
+}
+
+/* Content Wrapper */
+.content-wrapper {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+/* Main Content */
+.content {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.text-section {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.headline {
+  font-family: 'EB Garamond', serif;
+  font-size: 5rem;
+  font-weight: 500;
+  color: #000;
+  margin: 0;
+  line-height: 1;
+}
+
+/* Plus Grid */
+.plus-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  width: 100%;
+}
+
+.plus-row {
+  display: flex;
+  gap: 0.25rem;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.plus {
+  font-family: 'Inter', sans-serif;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  font-weight: 700;
+  flex: 1;
+  -webkit-text-stroke: 0.5px;
+}
+
+.plus-sm {
+  font-size: 2.5rem;
+  min-width: 3rem;
+  height: 3rem;
+}
+
+.plus-md {
+  font-size: 3.25rem;
+  min-width: 3.75rem;
+  height: 3.75rem;
+}
+
+.plus-lg {
+  font-size: 4rem;
+  min-width: 4.5rem;
+  height: 4.5rem;
+}
+
+.plus-l-sm, .plus-l-md, .plus-l-lg { 
+  color: #C0C0C0;
+  -webkit-text-stroke-color: #B0B0B0;
+}
+.plus-m-sm, .plus-m-md, .plus-m-lg { 
+  color: #999999;
+  -webkit-text-stroke-color: #888888;
+}
+.plus-d-sm, .plus-d-md, .plus-d-lg { 
+  color: #666666;
+  -webkit-text-stroke-color: #555555;
+}
+.plus-b-sm, .plus-b-md, .plus-b-lg { 
+  color: #333333;
+  -webkit-text-stroke-color: #222222;
+}
+
+.plus:hover {
+  transform: scale(1.1);
+}
+
+@media (max-width: 1024px) {
+  .plus-sm {
+    font-size: 2.25rem;
+    min-width: 2.75rem;
+    height: 2.75rem;
+  }
+
+  .plus-md {
+    font-size: 3rem;
+    min-width: 3.5rem;
+    height: 3.5rem;
+  }
+
+  .plus-lg {
+    font-size: 3.75rem;
+    min-width: 4.25rem;
+    height: 4.25rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .plus-sm {
+    font-size: 2rem;
+    min-width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  .plus-md {
+    font-size: 2.75rem;
+    min-width: 3.25rem;
+    height: 3.25rem;
+  }
+
+  .plus-lg {
+    font-size: 3.5rem;
+    min-width: 4rem;
+    height: 4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .plus-sm {
+    font-size: 1.75rem;
+    min-width: 2.25rem;
+    height: 2.25rem;
+  }
+
+  .plus-md {
+    font-size: 2.5rem;
+    min-width: 3rem;
+    height: 3rem;
+  }
+
+  .plus-lg {
+    font-size: 3.25rem;
+    min-width: 3.75rem;
+    height: 3.75rem;
+  }
+}
+
+/* Description */
+.description {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.75rem;
+  line-height: 1.5;
+  color: #000;
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+.description em {
+  font-family: 'EB Garamond', serif;
+  font-style: italic;
+  font-weight: 400;
+}
+
+.description strong {
+  font-weight: 600;
+}
+
+.description span {
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+/* Highlight colors */
+.highlight-blue { color: #4A90E2; }
+.highlight-red { color: #FF6B6B; }
+.highlight-green { color: #4AE2A0; }
+
+@media (max-width: 1024px) {
+  .description {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .description {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .description {
+    font-size: 1.125rem;
+    line-height: 1.4;
+  }
+}
+
+/* Subtext */
+.subtext {
+  font-family: 'EB Garamond', serif;
+  font-size: 1.125rem;
+  font-style: italic;
+  color: #666;
+  margin: 0;
+}
+
+/* Buttons */
+.button-group {
+  display: flex;
+  gap: 1rem;
+}
+
+.btn {
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  padding: 0.875rem 1.75rem;
+  border-radius: 2rem;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  white-space: nowrap;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
+
+.btn-outline {
+  background-color: transparent;
+  border: 1px solid #000;
+  color: #000;
+}
+
+.btn-solid {
+  background-color: #000;
+  border: 1px solid #000;
+  color: #fff;
+}
+
+/* Cursor Effects */
+.cursor-tracker {
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+}
+
+.cursor-line {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.cursor-line.vertical {
+  width: 1px;
+  height: 100%;
+  transform: translateX(-50%);
+}
+
+.cursor-line.horizontal {
+  width: 100%;
+  height: 1px;
+  transform: translateY(-50%);
+}
+
+.cursor-dot {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background-color: #000;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .content {
+    max-width: 700px;
+  }
+
+  .headline {
+    font-size: 4.5rem;
+  }
+
+  .description {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .content-wrapper {
+    padding: 1.5rem;
+  }
+
+  .content {
+    max-width: 100%;
+    gap: 3rem;
+  }
+
+  .hero-section {
+    gap: 2rem;
+  }
+
+  .text-section {
+    gap: 1.5rem;
+  }
+
+  .headline {
+    font-size: 4rem;
+  }
+
+  .description {
+    font-size: 1.25rem;
+  }
+
+  .button-group {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .content-wrapper {
+    padding: 1rem;
+  }
+
+  .headline {
+    font-size: 3.5rem;
+  }
+
+  .description {
+    font-size: 1.125rem;
+  }
+
+  .subtext {
+    font-size: 1rem;
+  }
+}
+
+/* Roles Page Styles */
+.app {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #fff;
+  transition: opacity 0.5s ease-in-out;
+  opacity: 1;
+}
+
+.fade-out {
+  opacity: 0;
+}
+
+.font-overusedGrotesk {
+  font-family: 'Inter', sans-serif;
+  font-variation-settings: 'wght' 400;
+}
+
+.w-3\/4 {
+  width: 75%;
+}
+
+@media (max-width: 768px) {
+  .w-3\/4 {
+    width: 90%;
+  }
+}
