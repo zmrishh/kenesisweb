@@ -1,11 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@400;500&display=swap');
 
+:root {
+  --spacing-xs: clamp(0.5rem, 1vw, 1rem);
+  --spacing-sm: clamp(1rem, 2vw, 2rem);
+  --spacing-md: clamp(1.5rem, 3vw, 3rem);
+  --spacing-lg: clamp(2rem, 4vw, 4rem);
+  --font-size-sm: clamp(0.875rem, 1vw, 1rem);
+  --font-size-base: clamp(1rem, 1.5vw, 1.25rem);
+  --font-size-lg: clamp(1.25rem, 2vw, 1.75rem);
+  --font-size-xl: clamp(1.5rem, 3vw, 2.5rem);
+  --font-size-xxl: clamp(2rem, 5vw, 5rem);
+}
+
 #root {
   width: 100%;
   min-height: 100vh;
   margin: 0;
   padding: 0;
   background-color: #FAFAFA;
+  overflow-x: hidden;
 }
 
 .main-container {
@@ -13,9 +26,11 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 2rem;
+  padding: var(--spacing-md);
   background-color: #fff; /* Same as roles page */
   overflow-x: hidden; /* Prevent horizontal scrolling */
+  min-height: 100vh;
+  box-sizing: border-box;
 }
 
 /* Header */
@@ -69,11 +84,13 @@ header {
 
 .headline {
   font-family: 'EB Garamond', serif;
-  font-size: 5rem;
+  font-size: var(--font-size-xxl);
   font-weight: 500;
   color: #000;
   margin: 0;
-  line-height: 1;
+  line-height: 1.1;
+  max-width: 100%;
+  word-wrap: break-word;
 }
 
 /* Plus Grid */
@@ -205,11 +222,13 @@ header {
 /* Description */
 .description {
   font-family: 'Inter', sans-serif;
-  font-size: 1.75rem;
+  font-size: var(--font-size-lg);
   line-height: 1.5;
   color: #000;
   margin: 0;
   letter-spacing: -0.01em;
+  max-width: 100%;
+  word-wrap: break-word;
 }
 
 .description em {
@@ -275,7 +294,20 @@ header {
 /* Buttons */
 .button-group {
   display: flex;
-  gap: 1rem;
+  gap: var(--spacing-sm);
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+@media (max-width: 480px) {
+  .button-group {
+    flex-direction: column;
+  }
+  
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
 }
 
 .btn {

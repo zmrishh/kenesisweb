@@ -1,12 +1,30 @@
 .form-container {
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   background-color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1rem;
-  overflow: hidden;
+  padding: var(--spacing-sm);
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+.form-input, 
+.file-drop-area, 
+.upload-button {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+@media (max-width: 480px) {
+  .form-row {
+    flex-direction: column;
+  }
+  
+  .form-group {
+    width: 100%;
+  }
 }
 
 .form-content {
