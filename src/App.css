@@ -12,25 +12,27 @@
   --font-size-xxl: clamp(2rem, 5vw, 5rem);
 }
 
-#root {
+html, body, #root {
   width: 100%;
-  min-height: 100vh;
+  height: 100%;
   margin: 0;
   padding: 0;
   background-color: #FAFAFA;
   overflow-x: hidden;
+  overflow-y: auto;
 }
 
 .main-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   padding: var(--spacing-md);
-  background-color: #fff; /* Same as roles page */
-  overflow-x: hidden; /* Prevent horizontal scrolling */
+  background-color: #fff;
+  overflow-x: hidden;
   min-height: 100vh;
   box-sizing: border-box;
+  overflow-y: auto;
 }
 
 /* Header */
@@ -93,70 +95,43 @@ header {
   word-wrap: break-word;
 }
 
-/* Plus Grid */
-.plus-grid {
+/* Terminal section styles */
+.hero-section {
   display: flex;
   flex-direction: column;
-  gap: 0.25rem;
+  gap: var(--spacing-md);
   width: 100%;
+  height: auto;
+  overflow: hidden;
 }
 
-.plus-row {
-  display: flex;
-  gap: 0.25rem;
-  justify-content: flex-start;
+.terminal-container {
   width: 100%;
+  padding: var(--spacing-xs);
+  margin: 20px auto;
+  position: relative;
 }
 
-.plus {
-  font-family: 'Inter', sans-serif;
-  line-height: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.2s ease;
-  font-weight: 700;
-  flex: 1;
-  -webkit-text-stroke: 0.5px;
+.terminal-container::after {
+  content: '';
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(0,0,0,0.1), transparent);
 }
 
-.plus-sm {
-  font-size: 2.5rem;
-  min-width: 3rem;
-  height: 3rem;
-}
-
-.plus-md {
-  font-size: 3.25rem;
-  min-width: 3.75rem;
-  height: 3.75rem;
-}
-
-.plus-lg {
-  font-size: 4rem;
-  min-width: 4.5rem;
-  height: 4.5rem;
-}
-
-.plus-l-sm, .plus-l-md, .plus-l-lg { 
-  color: #C0C0C0;
-  -webkit-text-stroke-color: #B0B0B0;
-}
-.plus-m-sm, .plus-m-md, .plus-m-lg { 
-  color: #999999;
-  -webkit-text-stroke-color: #888888;
-}
-.plus-d-sm, .plus-d-md, .plus-d-lg { 
-  color: #666666;
-  -webkit-text-stroke-color: #555555;
-}
-.plus-b-sm, .plus-b-md, .plus-b-lg { 
-  color: #333333;
-  -webkit-text-stroke-color: #222222;
-}
-
-.plus:hover {
-  transform: scale(1.1);
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @media (max-width: 1024px) {

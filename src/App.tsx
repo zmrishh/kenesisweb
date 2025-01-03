@@ -1,4 +1,5 @@
 import { useRef, useState, useEffect } from "react"
+import { Terminal } from "@/components/Terminal"
 import { useMousePosition } from "@/hooks/use-mouse-position"
 import Roles from './pages/Roles'
 import ApplicationForm from './pages/ApplicationForm'
@@ -64,20 +65,8 @@ export default function App() {
               <div className="content">
                 <div className="hero-section">
                   <h2 className="headline">Hey,</h2>
-                  
-                  <div className="plus-grid">
-                    {gridPattern.map((row, rowIndex) => (
-                      <div key={rowIndex} className="plus-row">
-                        {row.split(',').map((type, colIndex) => (
-                          <span 
-                            key={`${rowIndex}-${colIndex}`} 
-                            className={`plus plus-${type}`}
-                          >
-                            +
-                          </span>
-                        ))}
-                      </div>
-                    ))}
+                  <div className="terminal-container">
+                    <Terminal />
                   </div>
                 </div>
 
